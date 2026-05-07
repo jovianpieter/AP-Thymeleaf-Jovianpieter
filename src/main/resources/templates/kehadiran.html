@@ -1,4 +1,29 @@
-<table border="1">
-    <th>nama tdk hadir</th>
-    <th>nama hadir</th>
-</table>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body >
+    <h3>Tabel Tidak Hadir</h3>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+        </tr>
+        <tr th:each="siswa : ${listTdkHadir}">
+            <td th:text="${siswa.id}"></td>
+            <td th:text="${siswa.nama}"></td>
+        </tr>
+    </table>
+
+    <h3>Tabel Hadir</h3>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+        </tr>
+        <tr th:each="siswa : ${listHadir}">
+            <td th:text="${siswa.id}"></td>
+            <td th:text="${siswa.nama}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

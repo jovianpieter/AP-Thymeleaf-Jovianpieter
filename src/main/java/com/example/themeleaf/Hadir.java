@@ -11,6 +11,7 @@ public class Hadir {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String nama;
+    private boolean hadir;
 
     public Integer getId(){
         return id;
@@ -24,5 +25,13 @@ public class Hadir {
     }
     public void setNama(String nama){
         this.nama = nama;
+    }
+
+    public boolean isHadir(){
+        return hadir;
+    }
+
+    public void setHadir(boolean hadir){
+        this.hadir = hadir;
     }
 }
